@@ -97,7 +97,7 @@ deno task dev
 ## Project Structure
 
 ```
-project/
+lemonaid/
 ├── .cursor/
 │   └── rules/          # MDC rule files for AI assistance
 ├── components/         # Server-side components
@@ -165,9 +165,58 @@ project/
 - [Tailwind CSS v4](https://tailwindcss.com/)
 - [JSR (JavaScript Registry)](https://jsr.io/)
 
+## Security Features
+
+### API Key Authentication
+
+API routes under `/api` are protected by API key authentication:
+
+```bash
+# Set API key in environment
+API_KEY=your-secret-api-key
+
+# Include in requests
+curl -H "x-api-key: your-secret-api-key" https://your-app.com/api/data
+```
+
+### CORS Configuration
+
+Configure CORS in environment variables:
+
+```env
+CORS_ORIGIN=https://yourdomain.com,https://app.yourdomain.com
+CORS_ENABLED=true
+```
+
+### Environment Configuration
+
+All configuration is managed through environment variables. See `.env.example` for all options.
+
+## Logging
+
+Structured logging is available throughout the application:
+
+```ts
+import { log } from "@/utils/logger.ts";
+
+log.info("User logged in", { userId: "123" });
+log.error("Failed to process", { error });
+log.request("GET", "/api/users", 200, 45);
+```
+
+## Deployment
+
+This project is optimized for Deno Deploy. See [DEPLOY.md](./DEPLOY.md) for detailed deployment instructions.
+
+Quick deploy:
+1. Push to GitHub
+2. Connect to Deno Deploy
+3. Set environment variables
+4. Deploy!
+
 ## License
 
-[Add your license here - MIT, Apache 2.0, etc.]
+MIT License - See [LICENSE](./LICENSE) file for details.
 
 ## Contributing
 
