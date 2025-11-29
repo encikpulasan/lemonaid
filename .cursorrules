@@ -1,0 +1,110 @@
+# Project Context
+This is a Deno Fresh v2 web application using the island architecture pattern.
+
+# Tech Stack
+- Runtime: Deno (latest stable)
+- Framework: Fresh v2
+- UI Library: Preact
+- Styling: Tailwind CSS v4
+- Build Tool: Vite (via Fresh)
+- Testing: Deno's built-in test framework
+
+# Fresh v2 Architecture
+- Use file-based routing in routes/ directory (files map to URLs automatically)
+- Islands (in islands/ or (_islands)/) are interactive components that require client-side JS
+- Components (in components/ or (_components)/) are server-side only (no JS sent to client)
+- Use define.page() for page components in routes
+- Use define.handlers() for route handlers (GET, POST, etc.)
+- Use define.middleware() for middleware functions
+- Use define.layout() for layout components
+- Minimize islands - prefer server components when possible
+- Islands are automatically hydrated on the client
+- Islands can be nested within other islands
+- Only serializable props can be passed to islands (no functions)
+
+# Code Style Guidelines
+- Use TypeScript with strict mode (Deno default)
+- Follow Fresh v2 conventions and best practices
+- Prefer functional components
+- Use async/await over promises
+- Maximum function length: 50 lines
+- Maximum file length: 300 lines
+- Use JSR imports when available (jsr:@scope/package)
+- Use npm: imports for packages not available on JSR (like preact, tailwindcss)
+
+# Architecture Patterns
+- Island Architecture: Keep interactivity minimal and isolated
+- Server-first: Default to server components, use islands only when needed
+- File-based routing: Routes map directly to files in routes/
+- API routes: Use routes/api/ for backend endpoints
+- Keep components small and focused (single responsibility)
+- Separate business logic from UI/presentation
+- Implement proper error handling
+- Use ctx.state for sharing data between middlewares, layouts, and routes (typed via State interface in utils.ts)
+
+# Naming Conventions
+- Routes: kebab-case (e.g., user-profile.tsx)
+- Islands: PascalCase (e.g., Counter.tsx, UserProfile.tsx)
+- Components: PascalCase (e.g., Button.tsx, Layout.tsx)
+- Utilities: camelCase (e.g., formatDate.ts, validateEmail.ts)
+- Types/Interfaces: PascalCase (e.g., UserData.ts, ApiResponse.ts)
+- Constants: UPPER_SNAKE_CASE (e.g., API_BASE_URL)
+
+# Dependencies
+- Prefer JSR (JavaScript Registry) packages over npm
+- Use deno.land/x for Deno-specific packages
+- Use npm: imports when JSR alternative is not available (e.g., preact, tailwindcss)
+- Keep dependencies minimal and well-maintained
+- Use import maps in deno.json for cleaner imports
+
+# File Organization
+- One component per file
+- Co-locate related files (component + types)
+- Export types from centralized type files (types/)
+- Use @/ path alias for imports (configured in deno.json)
+- Routes go in routes/, islands in islands/, components in components/
+- State type is defined in utils.ts - extend State interface there when adding shared state
+
+# Tailwind CSS Guidelines
+- Use Tailwind CSS v4 utility classes for styling
+- Prefer utility classes over custom CSS when possible
+- Use Tailwind's responsive prefixes (sm:, md:, lg:, xl:, 2xl:)
+- Use Tailwind's dark mode classes when needed (dark:)
+- Keep custom CSS in static/styles.css if absolutely necessary
+- Use Tailwind's component classes and @apply directive sparingly
+
+# Testing Requirements
+- Write unit tests for all utility functions
+- Integration tests for critical user flows
+- Use Deno.test() for all tests
+- Aim for 80%+ code coverage
+- Use descriptive test names
+- Place tests next to source files with .test.ts extension
+
+# Security
+- Never commit API keys or secrets
+- Validate all user inputs
+- Use environment variables for configuration (Deno.env)
+- Implement proper authentication/authorization
+- Use Deno's built-in security features
+
+# Performance
+- Minimize islands (only use when interactivity is required)
+- Use server components for static content
+- Optimize images and assets in static/
+- Use Fresh's built-in optimizations
+- Monitor bundle size (islands are code-split automatically)
+
+# When generating code:
+- Always include proper TypeScript types
+- Add JSDoc comments for complex functions
+- Include error handling
+- Follow Fresh v2 patterns (define.page, define.handlers, define.middleware, define.layout)
+- Distinguish between islands and components
+- Use Tailwind CSS classes for styling
+- Ensure code is testable
+- Use Deno's standard library when appropriate
+- Import define helper from @/utils.ts (or ./utils.ts relative to file)
+- Use State interface from utils.ts for ctx.state typing
+- Follow the existing project structure and patterns
+

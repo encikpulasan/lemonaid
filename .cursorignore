@@ -1,0 +1,40 @@
+# Build outputs
+_fresh/
+.deno/
+dist/
+build/
+*.local
+
+# Dependencies
+node_modules/
+
+# Documentation (exclude from AI context to reduce noise)
+exported_docs/
+
+# Logs
+*.log
+logs/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+.nyc_output
+
+# Cache
+.cache/
+.temp/
+

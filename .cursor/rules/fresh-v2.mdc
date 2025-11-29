@@ -1,0 +1,51 @@
+---
+description: Fresh v2 project guidelines and architecture patterns
+globs: ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
+alwaysApply: true
+---
+
+# Fresh v2 Project Rules
+
+## Architecture Patterns
+
+- Use file-based routing in `routes/` directory
+- Islands (in `islands/` or `(_islands)/`) are interactive components requiring client-side JS
+- Components (in `components/` or `(_components)/`) are server-side only (no JS sent to client)
+- Use `define.page()` for page components in routes
+- Use `define.handlers()` for route handlers (GET, POST, etc.)
+- Use `define.middleware()` for middleware functions
+- Use `define.layout()` for layout components
+- Minimize islands - prefer server components when possible
+- Only serializable props can be passed to islands (no functions)
+
+## Code Generation Guidelines
+
+- Always use `define` helper from `@/utils.ts` or relative path `./utils.ts`
+- Use `State` interface from `utils.ts` for `ctx.state` typing
+- Import define helper: `import { define } from "@/utils.ts"`
+- Follow Fresh v2 patterns: `define.page`, `define.handlers`, `define.middleware`, `define.layout`
+- Distinguish between islands and components when generating code
+- Use Tailwind CSS v4 utility classes for styling
+- Include proper TypeScript types for all code
+- Add JSDoc comments for complex functions
+- Include error handling in all code
+
+## File Structure
+
+- Routes: `routes/` directory (kebab-case file names)
+- Islands: `islands/` or `(_islands)/` directories (PascalCase)
+- Components: `components/` or `(_components)/` directories (PascalCase)
+- Utilities: `utils/` directory (camelCase)
+- Types: Export from centralized type files or co-locate with components
+
+## State Management
+
+- Use `ctx.state` for sharing data between middlewares, layouts, and routes
+- Extend `State` interface in `utils.ts` when adding shared state properties
+- State is typed via `State` interface in `utils.ts`
+
+## Dependencies
+
+- Prefer JSR packages (`jsr:@scope/package`) over npm
+- Use `npm:` imports when JSR alternative is not available (e.g., preact, tailwindcss)
+- Keep dependencies minimal and well-maintained

@@ -1,0 +1,46 @@
+---
+description: Code examples and patterns reference
+globs: ["**/*.ts", "**/*.tsx"]
+alwaysApply: false
+---
+
+# Code Examples and Patterns
+
+## Reference Examples
+
+When generating code, refer to the examples in the `examples/` directory:
+
+- **`examples/route-with-handler.tsx`** - Route with data fetching handler pattern
+- **`examples/api-route.tsx`** - API endpoint with GET/POST handlers
+- **`examples/island-component.tsx`** - Interactive island component with Preact Signals
+- **`examples/server-component.tsx`** - Server-side component (no JS)
+
+## Common Patterns
+
+### Error Handling
+- Use `createError()` and `createErrorResponse()` from `@/utils/errors.ts`
+- Always handle errors in async operations
+- Return appropriate HTTP status codes
+
+### Validation
+- Use validation utilities from `@/utils/validation.ts`
+- Validate user inputs before processing
+- Return clear error messages
+
+### Type Safety
+- Import types from `@/types/index.ts` when available
+- Use TypeScript types for all function parameters and returns
+- Leverage the `State` interface from `@/utils.ts` for context state
+
+### Component Patterns
+- Server components (default): Place in `components/` directory
+- Islands (interactive): Place in `islands/` directory
+- Use Preact Signals for island state management
+- Only pass serializable props to islands
+
+## When to Use Examples
+
+- Creating new routes → See `examples/route-with-handler.tsx`
+- Creating API endpoints → See `examples/api-route.tsx`
+- Adding interactivity → See `examples/island-component.tsx`
+- Building reusable UI → See `examples/server-component.tsx`

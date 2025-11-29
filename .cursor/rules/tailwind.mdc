@@ -1,0 +1,41 @@
+---
+description: Tailwind CSS v4 styling guidelines
+globs: ["**/*.tsx", "**/*.jsx", "**/*.css"]
+alwaysApply: true
+---
+
+# Tailwind CSS v4 Guidelines
+
+## Styling Approach
+
+- Use Tailwind CSS v4 utility classes for styling
+- Prefer utility classes over custom CSS when possible
+- Keep custom CSS in `static/styles.css` only when absolutely necessary
+- Use Tailwind's component classes and `@apply` directive sparingly
+
+## Responsive Design
+
+- Use Tailwind's responsive prefixes: `sm:`, `md:`, `lg:`, `xl:`, `2xl:`
+- Follow mobile-first approach
+- Test responsive layouts at different breakpoints
+
+## Dark Mode
+
+- Use Tailwind's dark mode classes when needed: `dark:`
+- Ensure proper contrast in both light and dark modes
+- Test dark mode appearance
+
+## Best Practices
+
+- Use semantic class names when grouping utilities
+- Avoid inline styles - use Tailwind classes instead
+- Keep utility class combinations readable
+- Use Tailwind's spacing scale consistently
+- Leverage Tailwind's color palette
+
+## Custom Styles
+
+- Only add custom CSS when Tailwind utilities are insufficient
+- Place custom styles in `static/styles.css`
+- Document why custom CSS is needed
+- Consider creating reusable component classes if pattern repeats
