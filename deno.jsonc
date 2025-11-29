@@ -1,0 +1,17 @@
+// Deno Deploy configuration
+// This file is used by Deno Deploy to configure the project
+// Deno Deploy automatically detects Fresh projects and uses this configuration
+
+{
+  "imports": {
+    "fresh": "jsr:@fresh/core@^2.2.0",
+    "preact": "npm:preact@^10.27.1",
+    "@preact/signals": "npm:@preact/signals@^2.3.1",
+    "tailwindcss": "npm:tailwindcss@^4.1.10",
+    "@fresh/plugin-tailwind": "jsr:@fresh/plugin-tailwind@^0.0.1-alpha.9",
+    "@tailwindcss/postcss": "npm:@tailwindcss/postcss@^4.1.10",
+    "postcss": "npm:postcss@^8.5.6",
+    "@/": "./"
+  }
+}
+
