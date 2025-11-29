@@ -13,3 +13,4 @@ vendor/
 
 exported_docs/
 AI_PROJECT_SETUP_GUIDE.md
+deno.lock

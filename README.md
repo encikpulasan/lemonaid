@@ -1,5 +1,7 @@
 # Fresh Lemonaid
 
+![Fresh Lemonaid](https://repository-images.githubusercontent.com/1106460175/dd3a1c49-c700-414d-af6b-19f0465b7de5)
+
 A production-ready boilerplate for Deno Fresh v2 projects, optimized for AI-assisted development in Cursor IDE.
 
 > **Note**: This is a boilerplate template. See [BOILERPLATE.md](./BOILERPLATE.md) for setup instructions.
