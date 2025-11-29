@@ -1,0 +1,33 @@
+{
+  "name": "Fresh v2 Boilerplate",
+  "description": "Production-ready Deno Fresh v2 boilerplate optimized for AI-assisted development",
+  "include": [
+    ".cursor",
+    ".cursorrules",
+    ".cursorignore",
+    "components",
+    "examples",
+    "islands",
+    "routes",
+    "static",
+    "types",
+    "utils",
+    ".env.example",
+    "BOILERPLATE.md",
+    "deno.json",
+    "dev.ts",
+    "main.ts",
+    "README.md",
+    "utils.ts",
+    "LICENSE"
+  ],
+  "exclude": [
+    "exported_docs",
+    "AI_PROJECT_SETUP_GUIDE.md",
+    "AI_EFFICIENCY_IMPROVEMENTS.md",
+    "deno.lock",
+    "node_modules",
+    "_fresh"
+  ]
+}
+

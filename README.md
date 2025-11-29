@@ -1,6 +1,8 @@
-# Komiti
+# Fresh v2 Boilerplate
 
-A Deno Fresh v2 web application using the island architecture pattern.
+A production-ready boilerplate for Deno Fresh v2 projects, optimized for AI-assisted development in Cursor IDE.
+
+> **Note**: This is a boilerplate template. See [BOILERPLATE.md](./BOILERPLATE.md) for setup instructions.
 
 ## Tech Stack
 
@@ -160,6 +162,15 @@ Use `ctx.state` (typed via `State` interface in `utils.ts`) to share data betwee
 - [Tailwind CSS v4](https://tailwindcss.com/)
 - [JSR (JavaScript Registry)](https://jsr.io/)
 
+## Using as a Template
+
+This repository can be used as a boilerplate for new Fresh v2 projects:
+
+1. **GitHub Template**: Click "Use this template" on GitHub
+2. **Manual Clone**: Clone and customize (see [BOILERPLATE.md](./BOILERPLATE.md))
+
+See [BOILERPLATE.md](./BOILERPLATE.md) for detailed setup and customization instructions.
+
 ## License
 
-[Your License Here]
+MIT License - See [LICENSE](./LICENSE) file for details.
