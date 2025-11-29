@@ -118,7 +118,7 @@ Created `examples.mdc` rule file that:
 ## File Structure
 
 ```
-komiti/
+lemonaid/
 ├── .cursor/
 │   └── rules/
 │       ├── fresh-v2.mdc          # Fresh architecture patterns

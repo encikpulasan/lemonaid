@@ -62,7 +62,7 @@ cd my-new-project
 rm -rf .git
 git init
 git add .
-git commit -m "Initial commit from Fresh v2 boilerplate"
+git commit -m "Initial commit from Fresh Lemonaid"
 
 # Start customizing
 ```

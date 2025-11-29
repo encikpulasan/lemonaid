@@ -1,4 +1,4 @@
-# Fresh v2 Boilerplate
+# Fresh Lemonaid
 
 A production-ready boilerplate for Deno Fresh v2 projects, optimized for AI-assisted development in Cursor IDE.
 
@@ -46,7 +46,7 @@ deno fmt         # Format only
 ## Project Structure
 
 ```
-komiti/
+lemonaid/
 ├── routes/          # File-based routing (pages and API endpoints)
 ├── islands/         # Interactive components (client-side JS)
 ├── components/      # Server-side components (no JS sent to client)

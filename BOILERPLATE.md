@@ -1,4 +1,4 @@
-# Fresh v2 Boilerplate
+# Fresh Lemonaid
 
 This is a production-ready boilerplate for Deno Fresh v2 projects, optimized for AI-assisted development in Cursor IDE.
 
@@ -49,7 +49,7 @@ cd my-new-project
 rm -rf .git
 git init
 git add .
-git commit -m "Initial commit from Fresh v2 boilerplate"
+git commit -m "Initial commit from Fresh Lemonaid"
 ```
 
 ### 2. Customize Project
