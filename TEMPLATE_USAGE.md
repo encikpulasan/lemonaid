@@ -154,7 +154,7 @@ my-new-project/
 
 ```bash
 # 1. Clone/copy the boilerplate
-git clone <repo-url> my-project && cd my-project
+git clone https://github.com/encikpulasan/lemonaid my-project && cd my-project
 
 # 2. Initialize git (if needed)
 rm -rf .git && git init

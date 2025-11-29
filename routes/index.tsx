@@ -66,7 +66,7 @@ export default define.page(() => {
 
         {/* Footer Note */}
         <div class="mt-12 text-center text-gray-500">
-          <p>Made with ❤️ for developers who want to build fast, not configure</p>
+          <p><i>by lazy developer, for lazy developers</i><br/><a href="https://github.com/encikpulasan" class="text-amber-500">@encikpulasan</a></p>
         </div>
       </div>
     </div>
