@@ -1,6 +1,6 @@
 # Fresh Lemonaid
 
-![Fresh Lemonaid](https://repository-images.githubusercontent.com/1106460175/dd3a1c49-c700-414d-af6b-19f0465b7de5)
+![Fresh Lemonaid](https://repository-images.githubusercontent.com/1106460175/37a883e2-d75c-40e4-8a78-0c2a0b307366)
 
 A production-ready boilerplate for Deno Fresh v2 projects, optimized for AI-assisted development in Cursor IDE.
 
