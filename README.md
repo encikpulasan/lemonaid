@@ -224,6 +224,20 @@ This repository can be used as a boilerplate for new Fresh v2 projects:
 1. **GitHub Template**: Click "Use this template" on GitHub
 2. **Manual Clone**: Clone and customize (see [BOILERPLATE.md](./BOILERPLATE.md))
 
+### Cleanup Boilerplate Files
+
+After using this template, remove boilerplate-specific documentation and examples:
+
+```bash
+deno task cleanup
+```
+
+This removes:
+- Boilerplate documentation files (BOILERPLATE.md, TEMPLATE_USAGE.md, etc.)
+- Wiki folder (template documentation)
+- Examples folder (reference code)
+- Exported docs folder
+
 See [BOILERPLATE.md](./BOILERPLATE.md) for detailed setup and customization instructions.
 
 ## License

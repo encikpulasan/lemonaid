@@ -67,9 +67,21 @@ cp .env.example .env
 # Edit .env with your values
 ```
 
-#### Clean Up (Optional)
-- Remove `exported_docs/` if not needed
-- Remove `AI_PROJECT_SETUP_GUIDE.md` if not needed
+#### Clean Up Boilerplate Files
+
+Remove boilerplate-specific documentation and examples:
+
+```bash
+deno task cleanup
+```
+
+This automatically removes:
+- Boilerplate documentation files (BOILERPLATE.md, TEMPLATE_USAGE.md, SETUP.md, etc.)
+- Wiki folder (template documentation)
+- Examples folder (reference code)
+- Exported docs folder
+
+#### Customize Assets (Optional)
 - Customize `static/` assets (favicon, logo, etc.)
 
 ### 3. Start Development
@@ -83,6 +95,7 @@ deno task dev
 
 ## Customization Checklist
 
+- [ ] Run `deno task cleanup` to remove boilerplate files
 - [ ] Update project name in `README.md`
 - [ ] Update title in `routes/_app.tsx`
 - [ ] Configure `.env` file
@@ -90,7 +103,6 @@ deno task dev
 - [ ] Customize `State` interface in `utils.ts`
 - [ ] Add project-specific types to `types/index.ts`
 - [ ] Update `.cursorrules` with project-specific context
-- [ ] Remove unnecessary example files if desired
 - [ ] Add license file
 - [ ] Update `deno.json` with project-specific config
 

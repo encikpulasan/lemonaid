@@ -6,7 +6,8 @@
     "build": "deno run -A dev.ts build",
     "start": "deno run -A main.ts",
     "preview": "deno run -A main.ts",
-    "update": "deno run -A -r jsr:@fresh/update ."
+    "update": "deno run -A -r jsr:@fresh/update .",
+    "cleanup": "deno run -A scripts/cleanup.ts"
   },
   "lint": {
     "rules": {
